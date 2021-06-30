@@ -1,0 +1,19 @@
+{
+  "name": "study_ast",
+  "version": "1.0.0",
+  "description": "study abstract syntax tree",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server"
+  },
+  "keywords": [
+    "AST"
+  ],
+  "author": "cunhang_wwei",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
