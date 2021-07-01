@@ -1,8 +1,8 @@
 /*
  * @Date: 2021-06-30 18:49:18
  * @LastEditors: cunhang_wwei
- * @LastEditTime: 2021-06-30 19:08:32
- * @Description: 寻找字符串中连续出现最多次数的字符串（案例中的双指针算法）
+ * @LastEditTime: 2021-07-01 19:39:52
+ * @Description: 储备算法题一：双指针，寻找字符串中连续出现最多次数的字符串（案例中的双指针算法）
  */
 function solution(str) {
     if (!str) return
