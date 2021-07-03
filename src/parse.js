@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-07-02 11:09:08
  * @LastEditors: cunhang_wwei
- * @LastEditTime: 2021-07-03 16:31:14
+ * @LastEditTime: 2021-07-03 17:34:09
  * @Description: 生成 AST 抽象语法树
  */
 import parseAttribute from './parseAttribute'
@@ -36,8 +36,11 @@ export default function parse(templateString) {
             stack1.push(startTag)
             // 将对象推入数组
             stack2.push({ tag: startTag, children: [], attrs: parseAttribute(attrsString)})
-            // 指针移动标签的长度 + 2 + ,为什么 +2,因为 <> 也占两个长度
-            index += startTag.length + 2
+            // 得到attrsString的长度
+            const attrsStringLength = attrsString ? attrsString.length : 0
+            // 指针移动标签的长度 + 2 + attrsString.length
+            // 为什么 +2,因为 <> 也占两个长度
+            index += startTag.length + 2 + attrsStringLength
         } else if (endTagRegExp.test(tailStr)) {
             // 匹配结束标签
             const endTag = tailStr.match(endTagRegExp)[1]
